@@ -1,0 +1,104 @@
+/*Aligned the header text to the middle and added lines on the top and bottom of the text */
+header {
+    text-align: center;         
+    padding: 5px 0;            
+    border-top: 1px solid black; 
+    border-bottom: 1px solid black; 
+}
+
+/*Aligned the aside text to the left*/
+aside {
+    float: right; 
+    margin-left: 10px; 
+    text-align: right;
+}
+
+/*Made the "Press contact:" text bold*/
+aside::first-line {
+    font-weight: bold;
+}
+h1 {
+    padding-top: 6px;
+}
+
+/*Aligning the header text to the middle of the page with added padding and adding italic font style*/
+h2 {
+    text-align: center;     
+    margin: 0 auto;         
+    padding-top: 30px;
+    font-style: italic;    
+}
+
+/*Aligning the paragraph text to the middle of the page with added padding*/
+p {
+    text-align: justify;        
+    line-height: 1.25;           
+    padding-left: 20px;          
+    padding-right: 20px;  
+}
+
+/* Section for putting the image behind the text on section area of the page*/
+section {
+    position: relative;          
+    text-align: justify;         
+    line-height: 1;          
+    padding-left: 60px;          
+    padding-right: 20px;         
+    padding-bottom: 10px;        
+    padding-top: 10px;
+    z-index: 1;                
+    margin-left: 20px;
+    margin-right: 20px;
+    background-image: url ('WidgetCoLogo.gif');
+    background-size: 75%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Section for creating the tan and green rectangle*/
+section::before {
+    content: "";                 
+    position: absolute;          
+    top: 0;                      
+    left: 0;                   
+    right: 0;                    
+    bottom: 0;                   
+    background-color: rgb(255, 255, 238);  /* Tan section of the rectangle */
+    border: 2.75px solid green;     /* Green border for the rectangle */
+    border-left: 35px solid green; /* Increases the green border on the right side */
+    z-index: -1;                 /* Makes the tan rectangle positioned behind the text */
+}
+
+/* Section for putting the image behind the text on body area of the page*/
+body {
+    background-image: url('WidgetCoLogo.gif');
+    background-size: 75%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* Section for modifying the link text to be bold*/
+a{ 
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+footer {
+    font-size: 12px;              /* Text size */
+    color: gray;                  /* Text color to gray */
+    font-style: italic;           /* Italic text style */
+    padding-top: 5px;            
+    margin-top: 10px;             /* Adds space between the footer line and the rectangle */
+    border-top: 1px solid gray;   /* Thin gray border above the footer */
+    text-align: right;    
+}
+
+/* Section for keeping the footer style consistent and exclude the footer text from the <a> font weight and text decoration change */
+footer a {
+    text-decoration: none;
+    font-weight: normal;
+    color: gray;
+}
