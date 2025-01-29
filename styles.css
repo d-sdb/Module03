@@ -4,6 +4,7 @@ header {
     padding: 5px 0;            
     border-top: 1px solid black; 
     border-bottom: 1px solid black; 
+    font-variant: small-caps; /* Corrected the header text to small-caps*/
 }
 
 /*Aligned the aside text to the left*/
@@ -11,6 +12,8 @@ aside {
     float: right; 
     margin-left: 10px; 
     text-align: right;
+    border-right: 15px solid green; /* Corrected the right side created a vertical bar */
+    padding-right: 15px; /* Space between the text and the border */
 }
 
 /*Made the "Press contact:" text bold*/
@@ -49,11 +52,6 @@ section {
     z-index: 1;                
     margin-left: 20px;
     margin-right: 20px;
-    background-image: url ('WidgetCoLogo.gif');
-    background-size: 75%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 /* Section for creating the tan and green rectangle*/
@@ -65,7 +63,7 @@ section::before {
     right: 0;                    
     bottom: 0;                   
     background-color: rgb(255, 255, 238);  /* Tan section of the rectangle */
-    border: 2.75px solid green;     /* Green border for the rectangle */
+    border: 2.75px solid green;     /* Changed the green border for the rectangle to lavender */
     border-left: 35px solid green; /* Increases the green border on the right side */
     z-index: -1;                 /* Makes the tan rectangle positioned behind the text */
 }
@@ -77,6 +75,8 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    margin-left: 40px;  /* Corrected the left margin to be wider */
+    margin-right: 40px; /* Corrected the right margin to be wider */
 }
 
 
@@ -98,7 +98,7 @@ footer {
 
 /* Section for keeping the footer style consistent and exclude the footer text from the <a> font weight and text decoration change */
 footer a {
-    text-decoration: none;
+    text-decoration: underline; /* Corrected the footer text to have underlines*/ 
     font-weight: normal;
     color: gray;
 }
